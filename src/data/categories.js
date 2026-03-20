@@ -123,12 +123,10 @@ export const CATEGORIES = [
     { id: "best-motivator", title: "Best Motivator", emoji: "🔥", type: "personality", nominees: GLOBAL_NOMINEES },
     { id: "most-hardworking", title: "Most Hardworking", emoji: "💪", type: "personality", nominees: GLOBAL_NOMINEES },
     { id: "most-innovative", title: "Most Innovative", emoji: "💡", type: "personality", nominees: GLOBAL_NOMINEES },
-    { id: "best-dressed", title: "Best Dressed", emoji: "👗", type: "personality", splitGender: true, nominees: GLOBAL_NOMINEES },
-    { id: "class-favourite", title: "Class Favorite", emoji: "⭐", type: "personality", splitGender: true, nominees: GLOBAL_NOMINEES },
+    { id: "fashion-freak", title: "Fashion Freak", emoji: "👗", type: "personality", splitGender: true, nominees: GLOBAL_NOMINEES },
     { id: "social-butterfly", title: "Social Butterfly", emoji: "🦋", type: "personality", nominees: GLOBAL_NOMINEES },
-    { id: "most-likely-to-succeed", title: "Most Likely to Succeed", emoji: "🚀", type: "personality", nominees: GLOBAL_NOMINEES },
 
-    { id: "late-comer", title: "Late Comer King/Queen", emoji: "⏰", type: "funny", nominees: GLOBAL_NOMINEES },
+    { id: "late-comer", title: "Late Comer King/Queen", emoji: "⏰", type: "funny",splitGender: true, nominees: GLOBAL_NOMINEES },
     { id: "sleep-in-class", title: "Most Likely to Sleep in Class", emoji: "😴", type: "funny", nominees: GLOBAL_NOMINEES },
     { id: "meme-master", title: "Meme Master", emoji: "😂", type: "funny", nominees: GLOBAL_NOMINEES },
     { id: "assignment-copier", title: "Assignment Copier", emoji: "📋", type: "funny", nominees: GLOBAL_NOMINEES },
@@ -138,6 +136,7 @@ export const CATEGORIES = [
     { id: "snack-monster", title: "Snack Monster", emoji: "🍟", type: "funny", nominees: GLOBAL_NOMINEES },
     { id: "drama-king-queen", title: "Drama King/Queen", emoji: "🎭", type: "funny", nominees: GLOBAL_NOMINEES },
     { id: "silent-assassin", title: "Silent Assassin", emoji: "🤫", type: "funny", nominees: GLOBAL_NOMINEES },
+    { id: "gym-rat", title: "Gym Rat", emoji: "💪", type: "funny",splitGender: true, nominees: GLOBAL_NOMINEES },
 ];
 
 export const CATEGORY_COUNT = CATEGORIES.length;

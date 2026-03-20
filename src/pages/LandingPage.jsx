@@ -192,7 +192,7 @@ export default function LandingPage() {
             {/* Footer */}
             <footer style={{ borderTop: "1px solid var(--border)", padding: "24px", textAlign: "center" }}>
                 <p style={{ fontSize: 13, color: "var(--text-dim)" }}>
-                    🏆 AwardVault · College Awards 2026 · Powered by Appwrite
+                    🏆 CollegeCrown · College Awards 2026 · Powered by Appwrite
                 </p>
             </footer>
         </div>
