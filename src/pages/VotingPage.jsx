@@ -28,8 +28,10 @@ export default function VotingPage() {
         const init = async () => {
             try {
                 // Ensure Appwrite anonymous session exists for DB perm
-                await getOrCreateSession();
+                const session = await getOrCreateSession();
+                const appwriteUserId = session?.$id || session?.userId;
 
+                /* 
                 // Initialize FingerprintJS
                 const fp = await fpPromise.load();
                 const result = await fp.get();
@@ -42,8 +44,13 @@ export default function VotingPage() {
                     navigate("/thank-you", { replace: true });
                     return;
                 }
-
                 setUserId(visitorId);
+                */
+
+                // Temporary fallback for testing: use Appwrite ID instead of Fingerprint
+                if (appwriteUserId) {
+                    setUserId(appwriteUserId);
+                }
 
                 const nominees = await getNominees();
                 if (nominees && nominees.length > 0) {
@@ -92,7 +99,7 @@ export default function VotingPage() {
     }
 
     return (
-        <div className="page">
+        <div className="page page-with-bottom-nav">
             <Header
                 currentIndex={currentIndex}
                 totalCategories={dynamicCategories.length}

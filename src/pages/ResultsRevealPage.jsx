@@ -195,7 +195,7 @@ export default function ResultsRevealPage() {
                         {winner.name}
                     </div>
                 </div>
-                <div style={{ fontSize: 32, position: "relative", zIndex: 1 }}>🏆</div>
+                <div style={{ position: "relative", zIndex: 1 }}><img src="/logoaward.png" style={{ height: 48, width: "auto" }} alt="Logo" /></div>
             </div>
         ) : (
             <div style={{ textAlign: "center", padding: "24px", background: "rgba(255,255,255,0.02)", borderRadius: 16, flex: "1 1 300px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
@@ -308,7 +308,7 @@ export default function ResultsRevealPage() {
                                     </button>
                                     <ShareButton
                                         title={`Winner: ${winnerNames}`}
-                                        text={`🏆 ${winnerNames} won ${category.title} at CollegeCrown 2026!`}
+                                        text={`Official ${winnerNames} won ${category.title} at CollegeCrown 2026!`}
                                         url={window.location.origin + `/results/${category.id}`}
                                     />
                                 </div>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { clearVotesLocally } from "../lib/storage";
+import Footer from "../components/layout/Footer";
 
 export default function ThankYouPage() {
     const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function ThankYouPage() {
                 <p style={{ fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-dim)", fontWeight: 600 }}>
                     Votes submitted
                 </p>
-                <h1 className="success-title">Thank You! 🏆</h1>
+                <h1 className="success-title">Thank You! <img src="/logoaward.png" style={{ height: 32, width: "auto", verticalAlign: "middle" }} alt="Logo" /></h1>
                 <p style={{ color: "var(--text-muted)", maxWidth: 380, textAlign: "center", fontSize: 15, lineHeight: 1.7 }}>
                     Your votes have been recorded. Results will be revealed on the announcement date. Stay tuned!
                 </p>
@@ -78,6 +79,7 @@ export default function ThankYouPage() {
                     </div>
                 ))}
             </motion.div>
+            <Footer />
         </div>
     );
 }

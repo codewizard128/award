@@ -6,6 +6,7 @@ import { getDynamicCategories } from "../data/categories";
 import ComingSoonPage from "../components/results/ComingSoonPage";
 import ResultsDisplay from "../components/results/ResultsDisplay";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 
 // Fallback publish date (30 days from now)
 const FALLBACK_DATE = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
@@ -79,7 +80,7 @@ export default function ResultsPage() {
                         Official Results
                     </span>
                     <h1 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: 900, letterSpacing: "-0.04em", marginTop: 8 }}>
-                        Award Winners 🏆
+                        Award Winners <img src="/logoaward.png" style={{ height: 32, width: "auto", verticalAlign: "middle" }} alt="Logo" />
                     </h1>
                     <p style={{ color: "var(--text-muted)", fontSize: 15, marginTop: 10 }}>
                         The votes are in. Here are your college award winners!
@@ -92,6 +93,7 @@ export default function ResultsPage() {
                     <button className="btn btn-secondary" onClick={() => navigate("/")}>← Back to Home</button>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -110,6 +110,7 @@ a {
 }
 
 .page {
+  margin-bottom: 100px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -1235,7 +1236,8 @@ a {
   pointer-events: none;
 }
 
-body {
+/* Targeted bottom padding for pages with fixed navigation */
+.page-with-bottom-nav {
   padding-bottom: 120px;
 }
 

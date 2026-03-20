@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CATEGORIES from "../data/categories";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import FlipCounter from "../components/ui/FlipCounter";
 
 const containerVariants = {
@@ -27,7 +28,7 @@ const itemVariants = {
 
 const STATS = [
     { number: "30", label: "Categories" },
-    { number: "~67", label: "Nominees" },
+    { number: "67", label: "Nominees" },
     { number: "2026", label: "Edition" },
 ];
 
@@ -112,7 +113,7 @@ export default function LandingPage() {
                         style={{ textAlign: "center", marginBottom: 32 }}
                     >
                         <h2 className="section-title" style={{ textShadow: "0 0 15px rgba(255,255,255,0.2)" }}>Award Categories</h2>
-                        <p className="section-subtitle">Browse all 30 awards waiting for your picks</p>
+                        <p className="section-subtitle">Browse all 69 awards waiting for your picks</p>
                     </motion.div>
 
                     {/* Talent */}
@@ -190,11 +191,7 @@ export default function LandingPage() {
             </section>
 
             {/* Footer */}
-            <footer style={{ borderTop: "1px solid var(--border)", padding: "24px", textAlign: "center" }}>
-                <p style={{ fontSize: 13, color: "var(--text-dim)" }}>
-                    🏆 CollegeCrown · College Awards 2026 · Powered by Appwrite
-                </p>
-            </footer>
+            
         </div>
     );
 }
