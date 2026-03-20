@@ -19,7 +19,7 @@ export default function Header({ currentIndex, totalCategories, showProgress, on
                     style={{ cursor: "pointer" }}
                     onClick={() => navigate("/")}
                 >
-                    <img src="/logoaward.png" style={{ height: 24, width: "auto" }} alt="Logo" /> <span style={{ color: "white", fontSize: 15, letterSpacing: "-0.02em" }}>CollegeCrown</span>
+                    <img src="/logoaward.png" style={{ height: 24, width: "auto" }} alt="Logo" /> <span style={{ color: "white", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
                     <span className="hidden-mobile">College Awards 2026</span>
                 </div>
 

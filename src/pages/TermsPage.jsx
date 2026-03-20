@@ -23,7 +23,7 @@ export default function TermsPage() {
                     <section style={{ marginBottom: 40 }}>
                         <h2 style={{ fontSize: 24, marginBottom: 16, color: "white" }}>1. Acceptance of Terms</h2>
                         <p style={{ lineHeight: 1.8 }}>
-                            By accessing or using CollegeCrown, you agree to be bound by these Terms of Service.
+                            By accessing or using Campus Crown, you agree to be bound by these Terms of Service.
                             If you do not agree with any part of these terms, you may not use our platform.
                         </p>
                     </section>
@@ -40,7 +40,7 @@ export default function TermsPage() {
                     <section style={{ marginBottom: 40 }}>
                         <h2 style={{ fontSize: 24, marginBottom: 16, color: "white" }}>3. Content Ownership</h2>
                         <p style={{ lineHeight: 1.8 }}>
-                            The name "CollegeCrown," its logo, and all original content on this platform are
+                            The name "Campus Crown," its logo, and all original content on this platform are
                             the intellectual property of Fennechron Labs. You may not use our branding
                             without explicit permission.
                         </p>
@@ -49,7 +49,7 @@ export default function TermsPage() {
                     <section style={{ marginBottom: 40 }}>
                         <h2 style={{ fontSize: 24, marginBottom: 16, color: "white" }}>4. Limitation of Liability</h2>
                         <p style={{ lineHeight: 1.8 }}>
-                            CollegeCrown is provided "as is" without any warranties.
+                            Campus Crown is provided "as is" without any warranties.
                             We are not responsible for any inaccuracies in voting results or
                             interruptions in service.
                         </p>

@@ -105,7 +105,7 @@ export default function Footer() {
                     gap: 20
                 }}>
                     <p style={{ fontSize: 13, color: "var(--text-dim)", margin: 0 }}>
-                        &copy; {currentYear} CollegeCrown. Built with 🪄 by Fennechron Labs.
+                        &copy; {currentYear} Campus Crown. Built with 🪄 by Fennechron Labs.
                     </p>
                     <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
 

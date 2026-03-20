@@ -308,7 +308,7 @@ export default function ResultsRevealPage() {
                                     </button>
                                     <ShareButton
                                         title={`Winner: ${winnerNames}`}
-                                        text={`Official ${winnerNames} won ${category.title} at CollegeCrown 2026!`}
+                                        text={`Official ${winnerNames} won ${category.title} at Campus Crown 2026!`}
                                         url={window.location.origin + `/results/${category.id}`}
                                     />
                                 </div>
