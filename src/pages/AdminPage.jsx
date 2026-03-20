@@ -6,7 +6,7 @@ import { ID } from "appwrite";
 import { getResults } from "../lib/appwrite";
 import CATEGORIES from "../data/categories";
 
-const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET || "admin2026";
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET ;
 
 export default function AdminPage() {
     const navigate = useNavigate();
