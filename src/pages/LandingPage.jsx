@@ -27,7 +27,7 @@ const itemVariants = {
 };
 
 const STATS = [
-    { number: "30", label: "Categories" },
+    { number: "30+", label: "Categories" },
     { number: "67", label: "Nominees" },
     { number: "2026", label: "Edition" },
 ];
