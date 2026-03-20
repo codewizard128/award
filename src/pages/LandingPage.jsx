@@ -62,7 +62,7 @@ export default function LandingPage() {
                     </motion.h1>
 
                     <motion.p variants={itemVariants} className="landing-subtitle">
-                        Cast your votes across 30 award categories — from talent and personality to the awards everyone secretly wants.
+                        Cast your votes across 30+ award categories — from talent and personality to the awards everyone secretly wants.
                     </motion.p>
 
                     <motion.div variants={itemVariants}>
