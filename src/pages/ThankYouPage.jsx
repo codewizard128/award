@@ -79,7 +79,7 @@ export default function ThankYouPage() {
                     </div>
                 ))}
             </motion.div>
-            <Footer />
+         
         </div>
     );
 }

@@ -93,7 +93,7 @@ export default function ResultsPage() {
                     <button className="btn btn-secondary" onClick={() => navigate("/")}>← Back to Home</button>
                 </div>
             </div>
-            <Footer />
+         
         </div>
     );
 }
