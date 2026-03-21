@@ -40,7 +40,8 @@ export default function Footer() {
                                 gap: 10
                             }}
                         >
-                            <img src="/logoaward.png" style={{ height: 28, width: "auto" }} alt="Logo" />
+                            <img src="/logoaward.png" style={{ height: 40, width: "auto" }} alt="Logo" />
+                            <span style={{ color: "var(--text-muted)", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
                         </div>
                         <p style={{ color: "var(--text-muted)", fontSize: 14, lineHeight: 1.6, maxWidth: 300 }}>
                             Celebrating the excellence, talent, and unique memories of college life.

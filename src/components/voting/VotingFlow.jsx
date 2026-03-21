@@ -134,6 +134,11 @@ import BottomNav from "../layout/BottomNav"; export default function VotingFlow(
                 isLast={currentIndex === totalCategories - 1}
                 votedCount={votedCount}
                 totalCategories={totalCategories}
+                isVoted={currentCategory.splitGender
+                    ? (votes[`${currentCategory.id}-Male`] && votes[`${currentCategory.id}-Female`])
+                    : !!votes[currentCategory.id]
+                }
+                isSplit={currentCategory.splitGender}
             />
         </div>
     );

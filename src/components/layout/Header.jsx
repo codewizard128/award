@@ -21,7 +21,7 @@ export default function Header({ currentIndex, totalCategories, showProgress, on
                     style={{ cursor: "pointer",backgroundColor:"transparent",border:"1px solid var(--border)",color:"var(--text-muted)",borderRadius:"10px",padding:"10px 10px"}}
                     onClick={() => navigate("/")}
                 >
-                    <img src="/logoaward.png" style={{ height: 24, width: "auto" ,mixBlendMode:"screen"}} alt="Logo" /> <span style={{ color: "var(--text-muted)", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
+                    <img src="/logoaward.png" style={{ height: 40, width: "auto" ,mixBlendMode:"screen", borderRadius:"20px"}} alt="Logo" /> <span style={{ color: "var(--text-muted)", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
 
                 </div>
 

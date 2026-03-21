@@ -27,6 +27,7 @@ export default function NomineeCard({ nominee, selected, onSelect, disabled }) {
             </div>
 
             <div className="nominee-check">
+                <span style={{ fontSize: 10, fontWeight: 700, marginRight: 4, color: "#000", textTransform: "uppercase", letterSpacing: "0.02em" }}>Selected</span>
                 <CheckIcon />
             </div>
         </motion.div>

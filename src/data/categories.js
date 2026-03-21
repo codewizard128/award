@@ -106,8 +106,10 @@ export const GLOBAL_NOMINEES = [
 ];
 
 export const CATEGORIES = [
-    { id: "golden-voice", title: "Golden Voice", emoji: "🎤", type: "talent", nominees: GLOBAL_NOMINEES },
-{ id: "dance-dynamo", title: "Dance Dynamo", emoji: "💃", type: "talent", nominees: GLOBAL_NOMINEES },
+    { id: "golden-voice-male", title: "Golden Voice Male", emoji: "🎤", type: "talent", nominees: GLOBAL_NOMINEES , gender:"Male"},
+    { id: "golden-voice-female", title: "Golden Voice Female", emoji: "🎤", type: "talent", nominees: GLOBAL_NOMINEES ,gender:"Female"},
+{ id: "dance-dynamo-male", title: "Dance Dynamo Male", emoji: "💃", type: "talent", nominees: GLOBAL_NOMINEES , gender:"Male"},
+{ id: "dance-dynamo-female", title: "Dance Dynamo Female", emoji: "💃", type: "talent", nominees: GLOBAL_NOMINEES , gender:"Female"},
 { id: "creative-canvas", title: "Creative Canvas", emoji: "🎨", type: "talent", nominees: GLOBAL_NOMINEES },
 { id: "code-wizard", title: "Code Wizard", emoji: "💻", type: "talent", nominees: GLOBAL_NOMINEES },
 { id: "master-orator", title: "Master Orator", emoji: "🎙️", type: "talent", nominees: GLOBAL_NOMINEES },
@@ -126,8 +128,8 @@ export const CATEGORIES = [
 { id: "quick-learner", title: "Quick Learner", emoji: "📘", type: "mind", nominees: GLOBAL_NOMINEES },
 
 { id: "kind-heart", title: "Kind Heart", emoji: "💖", type: "personality", nominees: GLOBAL_NOMINEES },
-{ id: "friendly-vibes", title: "Friendly Vibes", emoji: "😊", type: "personality", nominees: GLOBAL_NOMINEES },
-{ id: "natural-leader", title: "Natural Leader", emoji: "👑", type: "personality", nominees: GLOBAL_NOMINEES },
+{ id: "natural-leader-male", title: "Natural Leader Male", emoji: "👑", type: "personality", nominees: GLOBAL_NOMINEES , gender:"Male"},
+{ id: "natural-leader-female", title: "Natural Leader Female", emoji: "👑", type: "personality", nominees: GLOBAL_NOMINEES , gender:"Female"},
 { id: "motivator", title: "The Motivator", emoji: "🔥", type: "personality", nominees: GLOBAL_NOMINEES },
 { id: "hardworking-star", title: "Hardworking Star", emoji: "💪", type: "personality", nominees: GLOBAL_NOMINEES },
 { id: "calm-composed", title: "Calm & Composed", emoji: "🧘", type: "personality", nominees: GLOBAL_NOMINEES },
@@ -140,14 +142,12 @@ export const CATEGORIES = [
 { id: "always-there", title: "Always There", emoji: "🫶", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "team-player", title: "Team Player", emoji: "🏆", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "bond-builder", title: "Bond Builder", emoji: "🔗", type: "social", nominees: GLOBAL_NOMINEES },
-{ id: "go-to-person", title: "Go-To Person", emoji: "📞", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "best-listener", title: "Best Listener", emoji: "👂", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "most-approachable", title: "Most Approachable", emoji: "😊", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "social-butterfly", title: "Social Butterfly", emoji: "🦋", type: "social", nominees: GLOBAL_NOMINEES },
 { id: "group-chat-ghost", title: "Group Chat Ghost", emoji: "👻", type: "social", nominees: GLOBAL_NOMINEES },
 
 { id: "meme-master", title: "Meme Master", emoji: "😂", type: "funny", nominees: GLOBAL_NOMINEES },
-{ id: "snack-monster", title: "Snack Monster", emoji: "🍟", type: "funny", nominees: GLOBAL_NOMINEES },
 { id: "playlist-pro", title: "Playlist Pro", emoji: "🎧", type: "funny", nominees: GLOBAL_NOMINEES },
 { id: "reels-star", title: "Reels Star", emoji: "📱", type: "funny", nominees: GLOBAL_NOMINEES },
 { id: "screenshot-keeper", title: "Screenshot Keeper", emoji: "📸", type: "funny", nominees: GLOBAL_NOMINEES },
@@ -161,7 +161,6 @@ export const CATEGORIES = [
 { id: "grand-entry", title: "Grand Entry Specialist", emoji: "⏰", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "power-nap", title: "Power Nap Champion", emoji: "😴", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "last-bench-legend", title: "Last Bench Legend", emoji: "😎", type: "relatable", nominees: GLOBAL_NOMINEES },
-{ id: "proxy-pro", title: "Proxy Pro", emoji: "👻", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "wifi-hunter", title: "WiFi Hunter", emoji: "📶", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "last-minute-hero", title: "Last-Minute Hero", emoji: "⏰", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "deadline-survivor", title: "Deadline Survivor", emoji: "📚", type: "relatable", nominees: GLOBAL_NOMINEES },

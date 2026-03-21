@@ -32,7 +32,7 @@ function Particles({ count = 120, active }) {
       y: Math.random() * 100,
       size: Math.random() * 3 + 0.5,
       opacity: Math.random() * 0.6 + 0.1,
-      color: ["#fbbf24","#fff","#a78bfa","#f472b6","#34d399"][Math.floor(Math.random() * 5)],
+      color: ["#fbbf24", "#fff", "#a78bfa", "#f472b6", "#34d399"][Math.floor(Math.random() * 5)],
     }))
   ).current;
 
@@ -97,8 +97,10 @@ function PhaseIntro({ category, onAdvance }) {
         initial={{ scale: 0, rotate: -20 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ type: "spring", stiffness: 200, damping: 16, delay: 0.2 }}
-        style={{ fontSize: "clamp(80px, 18vw, 160px)", lineHeight: 1, marginBottom: 24,
-          filter: "drop-shadow(0 0 40px rgba(251,191,36,0.7))" }}
+        style={{
+          fontSize: "clamp(80px, 18vw, 160px)", lineHeight: 1, marginBottom: 24,
+          filter: "drop-shadow(0 0 40px rgba(251,191,36,0.7))"
+        }}
       >
         {category.emoji}
       </motion.div>
@@ -124,8 +126,10 @@ function PhaseIntro({ category, onAdvance }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
-        style={{ fontSize: "clamp(11px, 1.5vw, 14px)", letterSpacing: "0.35em",
-          color: "rgba(255,255,255,0.3)", textTransform: "uppercase", marginTop: 20 }}
+        style={{
+          fontSize: "clamp(11px, 1.5vw, 14px)", letterSpacing: "0.35em",
+          color: "rgba(255,255,255,0.3)", textTransform: "uppercase", marginTop: 20
+        }}
       >
         Campus Crown · 2026
       </motion.p>
@@ -206,8 +210,10 @@ function PhaseDrum({ category, onReveal }) {
       <motion.div
         animate={{ rotate: [-10, 10, -10], scale: [1, 1.18, 1] }}
         transition={{ duration: 0.32, repeat: Infinity, ease: "easeInOut" }}
-        style={{ fontSize: "clamp(60px, 12vw, 110px)", marginBottom: 32,
-          filter: "drop-shadow(0 0 30px rgba(255,255,255,0.25))" }}
+        style={{
+          fontSize: "clamp(60px, 12vw, 110px)", marginBottom: 32,
+          filter: "drop-shadow(0 0 30px rgba(255,255,255,0.25))"
+        }}
       >
         🥁
       </motion.div>
@@ -219,8 +225,10 @@ function PhaseDrum({ category, onReveal }) {
         Tallying votes…
       </p>
 
-      <div style={{ height: "clamp(56px, 8vh, 80px)", display: "flex", alignItems: "center",
-        justifyContent: "center", gap: 20, marginBottom: 56, minWidth: "60vw" }}>
+      <div style={{
+        height: "clamp(56px, 8vh, 80px)", display: "flex", alignItems: "center",
+        justifyContent: "center", gap: 20, marginBottom: 56, minWidth: "60vw"
+      }}>
         <AnimatePresence mode="wait">
           {current && (
             <motion.div
@@ -442,8 +450,10 @@ function SingleWinnerHero({ winner, votes, totalVotes }) {
         <motion.span
           animate={{ y: [0, -10, 0], rotate: [-5, 5, -5] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          style={{ fontSize: "clamp(40px, 6vw, 64px)", display: "inline-block",
-            filter: "drop-shadow(0 0 24px rgba(251,191,36,0.9))", marginBottom: 16 }}
+          style={{
+            fontSize: "clamp(40px, 6vw, 64px)", display: "inline-block",
+            filter: "drop-shadow(0 0 24px rgba(251,191,36,0.9))", marginBottom: 16
+          }}
         >
           👑
         </motion.span>
@@ -457,11 +467,13 @@ function SingleWinnerHero({ winner, votes, totalVotes }) {
         style={{ display: "flex", justifyContent: "center", marginBottom: 28 }}
       >
         <motion.div
-          animate={{ boxShadow: [
-            `0 0 50px ${winner.color}44`,
-            `0 0 100px ${winner.color}77`,
-            `0 0 50px ${winner.color}44`,
-          ]}}
+          animate={{
+            boxShadow: [
+              `0 0 50px ${winner.color}44`,
+              `0 0 100px ${winner.color}77`,
+              `0 0 50px ${winner.color}44`,
+            ]
+          }}
           transition={{ duration: 2.5, repeat: Infinity }}
           style={{
             width: "clamp(120px, 20vw, 200px)", height: "clamp(120px, 20vw, 200px)",
@@ -573,8 +585,10 @@ function TieLayout({ winners, ranked, total, category }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        style={{ fontSize: "clamp(10px, 1.5vw, 13px)", letterSpacing: "0.25em",
-          color: "#fbbf24", textTransform: "uppercase", marginBottom: 32 }}
+        style={{
+          fontSize: "clamp(10px, 1.5vw, 13px)", letterSpacing: "0.25em",
+          color: "#fbbf24", textTransform: "uppercase", marginBottom: 32
+        }}
       >
         It's a tie!
       </motion.p>
@@ -632,8 +646,10 @@ function WinnerPanel({ winners, ranked, total, label, category, delay, accentCol
         }}
       />
 
-      <p style={{ fontSize: "clamp(9px, 1.2vw, 11px)", letterSpacing: "0.25em",
-        color: accentColor, textTransform: "uppercase", marginBottom: 24, opacity: 0.85, position: "relative" }}>
+      <p style={{
+        fontSize: "clamp(9px, 1.2vw, 11px)", letterSpacing: "0.25em",
+        color: accentColor, textTransform: "uppercase", marginBottom: 24, opacity: 0.85, position: "relative"
+      }}>
         {label}
       </p>
 
@@ -644,8 +660,10 @@ function WinnerPanel({ winners, ranked, total, label, category, delay, accentCol
             <motion.span
               animate={{ y: [0, -8, 0], rotate: [-4, 4, -4] }}
               transition={{ duration: 2 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
-              style={{ fontSize: "clamp(24px, 4vw, 36px)", display: "inline-block",
-                marginBottom: 12, filter: "drop-shadow(0 0 12px rgba(251,191,36,0.8))" }}
+              style={{
+                fontSize: "clamp(24px, 4vw, 36px)", display: "inline-block",
+                marginBottom: 12, filter: "drop-shadow(0 0 12px rgba(251,191,36,0.8))"
+              }}
             >
               👑
             </motion.span>
@@ -705,8 +723,22 @@ function WinnerPanel({ winners, ranked, total, label, category, delay, accentCol
                 flex: 1, fontSize: "clamp(11px, 1.4vw, 13px)",
                 color: isW ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
                 overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                display: "flex", alignItems: "center", gap: 8
               }}>
                 {n.name}
+                <span style={{
+                  fontSize: 9,
+                  padding: "2px 6px",
+                  borderRadius: 4,
+                  background: isW ? "rgba(74, 222, 128, 0.2)" : "rgba(255, 255, 255, 0.05)",
+                  color: isW ? "#4ade80" : "rgba(255,255,255,0.2)",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em",
+                  border: `1px solid ${isW ? "rgba(74, 222, 128, 0.3)" : "rgba(255,255,255,0.1)"}`
+                }}>
+                  {isW ? "Selected" : "Not Selected"}
+                </span>
               </div>
               <div style={{ width: 80, flexShrink: 0 }}>
                 <div style={{ height: 3, background: "rgba(255,255,255,0.07)", borderRadius: 2, overflow: "hidden" }}>
@@ -824,10 +856,12 @@ export default function ResultsRevealPage() {
 
   if (loading) {
     return (
-      <div style={{ position: "fixed", inset: 0, background: "#05050f",
-        display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{
+        position: "fixed", inset: 0, background: "#05050f",
+        display: "flex", alignItems: "center", justifyContent: "center"
+      }}>
         <motion.div
-          animate={{ }}
+          animate={{}}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           style={{ fontSize: 48 }}
         >Please Wait...</motion.div>
@@ -837,8 +871,10 @@ export default function ResultsRevealPage() {
 
   if (!category) {
     return (
-      <div style={{ position: "fixed", inset: 0, background: "#05050f", display: "flex",
-        flexDirection: "column", alignItems: "center", justifyContent: "center", color: "white" }}>
+      <div style={{
+        position: "fixed", inset: 0, background: "#05050f", display: "flex",
+        flexDirection: "column", alignItems: "center", justifyContent: "center", color: "white"
+      }}>
         <h2 style={{ marginBottom: 20 }}>Category not found</h2>
         <button onClick={() => navigate("/results")} style={{
           background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)",
@@ -880,7 +916,7 @@ export default function ResultsRevealPage() {
 
       <AnimatePresence mode="wait">
         {phase === "intro" && <PhaseIntro key="intro" category={category} onAdvance={goToDrum} />}
-        {phase === "drum"  && <PhaseDrum  key="drum"  category={category} onReveal={goToReveal} />}
+        {phase === "drum" && <PhaseDrum key="drum" category={category} onReveal={goToReveal} />}
         {phase === "reveal" && (
           <PhaseReveal
             key="reveal"

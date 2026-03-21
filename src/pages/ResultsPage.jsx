@@ -18,6 +18,7 @@ export default function ResultsPage() {
     const [remoteNominees, setRemoteNominees] = useState([]);
     const [loading, setLoading] = useState(true);
     const [revealed, setRevealed] = useState(false);
+    const [isYear2027, setIsYear2027] = useState(false);
 
     useEffect(() => {
         async function load() {
@@ -28,7 +29,10 @@ export default function ResultsPage() {
 
                 const now = new Date();
                 const pub = new Date(finalDate);
-                if (now >= pub) {
+
+                if (pub.getFullYear() === 2027) {
+                    setIsYear2027(true);
+                } else if (now >= pub && pub.getFullYear() === 2026) {
                     const [res, nominees] = await Promise.all([
                         getResults(),
                         getNominees()
@@ -62,6 +66,36 @@ export default function ResultsPage() {
         );
     }
 
+    if (isYear2027) {
+        return (
+            <div className="page">
+                <Header currentIndex={0} totalCategories={30} showProgress={false} />
+                <div className="container" style={{ paddingTop: 100, paddingBottom: 60, textAlign: "center" }}>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div style={{ fontSize: 64, marginBottom: 24 }}></div>
+                        <h1 style={{ fontSize: "clamp(24px, 5vw, 40px)", fontWeight: 800, marginBottom: 16 }}>
+                            Result date is not yet declared
+                        </h1>
+                        <p style={{ color: "var(--text-muted)", fontSize: 16 }}>
+                            The result date will be announced soon. Stay tuned!
+                        </p>
+                        <button
+                            className="btn btn-primary"
+                            style={{ marginTop: 32 }}
+                            onClick={() => navigate("/")}
+                        >
+                            Back to Home
+                        </button>
+                    </motion.div>
+                </div>
+                <Footer />
+            </div>
+        );
+    }
     if (!revealed) {
         return <ComingSoonPage publishDate={publishDate} />;
     }
@@ -93,7 +127,7 @@ export default function ResultsPage() {
                     <button className="btn btn-secondary" onClick={() => navigate("/")}>← Back to Home</button>
                 </div>
             </div>
-         <Footer/>
+            <Footer />
         </div>
     );
 }

@@ -420,9 +420,8 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  padding: 4px 10px;
+  border-radius: 20px;
   background: white;
   display: flex;
   align-items: center;
@@ -430,6 +429,7 @@ a {
   opacity: 0;
   transform: scale(0.5);
   transition: all var(--transition-bounce);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nominee-card.selected .nominee-check {

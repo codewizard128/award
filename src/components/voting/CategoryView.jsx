@@ -304,13 +304,13 @@ export default function CategoryView({
                             <div className="voting-nav-center">
                                 {category.splitGender ? (
                                     (selectedMale && selectedFemale) ? (
-                                        <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 13 }}>✓ Both votes recorded</span>
+                                        <span style={{ color: "#4ade80", fontSize: 13, fontWeight: 700 }}>✓ All selections made</span>
                                     ) : (
                                         <span>Select {activeTab} nominee</span>
                                     )
                                 ) : (
                                     selectedNominee ? (
-                                        <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 13 }}>✓ Vote recorded</span>
+                                        <span style={{ color: "#4ade80", fontSize: 13, fontWeight: 700 }}>✓ Nominee selected</span>
                                     ) : (
                                         <span>Select a nominee</span>
                                     )
