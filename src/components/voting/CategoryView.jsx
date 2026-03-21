@@ -130,6 +130,14 @@ export default function CategoryView({
 
         if (category.splitGender) {
             list = list.filter(n => n.gender === activeTab || n.id === "none");
+        } else if (category.gender) {
+            const catGender = category.gender.toLowerCase();
+            if (catGender === "male" || catGender === "m") {
+                list = list.filter(n => n.gender === "Male" || n.id === "none");
+            } else if (catGender === "female" || catGender === "f") {
+                list = list.filter(n => n.gender === "Female" || n.id === "none");
+            }
+            // If "both", it skips filtering and shows all nominees.
         }
 
         const q = searchTerm.toLowerCase().trim();
@@ -139,7 +147,7 @@ export default function CategoryView({
             n.tagline?.toLowerCase().includes(q) ||
             n.id === "none"
         );
-    }, [category.nominees, searchTerm, category.splitGender, activeTab]);
+    }, [category.nominees, searchTerm, category.splitGender, category.gender, activeTab]);
 
     return (
         <div
@@ -185,7 +193,7 @@ export default function CategoryView({
                         </div>
                         <input
                             type="text"
-                            placeholder={`Search among 67 nominees for ${category.title}...`}
+                            placeholder={`Search for ${category.title} nominees...`}
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="input"
