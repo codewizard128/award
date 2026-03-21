@@ -29,29 +29,24 @@ export default function VotingPage() {
         const init = async () => {
             try {
                 // Ensure Appwrite anonymous session exists for DB perm
-                const session = await getOrCreateSession();
-                const appwriteUserId = session?.$id || session?.userId;
+                await getOrCreateSession();
 
-                /* 
-                // Initialize FingerprintJS
+                // Initialize FingerprintJS for unique device identification
                 const fp = await fpPromise.load();
                 const result = await fp.get();
                 const visitorId = result.visitorId;
 
-                // Check if this device has already voted
+                // Check if this device has already voted via Appwrite
                 const previousVotes = await getUserVotes(visitorId);
-                if (Object.keys(previousVotes).length > 0) {
-                    markSubmitted(); // Sync local storage
+                if (previousVotes && Object.keys(previousVotes).length > 0) {
+                    console.log("Found existing votes for device:", visitorId);
+                    markSubmitted(); // Sync local storage status
                     navigate("/thank-you", { replace: true });
                     return;
                 }
-                setUserId(visitorId);
-                */
 
-                // Temporary fallback for testing: use Appwrite ID instead of Fingerprint
-                if (appwriteUserId) {
-                    setUserId(appwriteUserId);
-                }
+                // Use visitorId as the primary identification for votes
+                setUserId(visitorId);
 
                 const nominees = await getNominees();
                 if (nominees && nominees.length > 0) {
@@ -137,7 +132,7 @@ export default function VotingPage() {
                     />
                 )}
             </AnimatePresence>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
