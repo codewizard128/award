@@ -145,7 +145,7 @@ a {
 }
 
 .header-logo span {
-  font-size:12px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-muted);
   letter-spacing: 0.04em;
@@ -449,12 +449,20 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
+  .nominee-card {
+    padding: 24px 12px;
+  }
 }
 
 @media (max-width: 420px) {
   .nominees-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+
+  .nominee-card {
+    padding: 24px 8px;
   }
 }
 
@@ -1411,6 +1419,21 @@ a {
     min-width: 62px;
     padding: 12px 14px;
   }
+
+  .bottom-nav-container {
+    padding: 16px;
+  }
+
+  .bottom-nav {
+    width: 100%;
+    min-width: unset;
+    border-radius: 20px;
+  }
+
+  .bottom-nav-btn {
+    flex: 1;
+  }
+
 
   .countdown-number {
     font-size: 28px;

@@ -56,11 +56,57 @@ export default function CategoryView({
         }
     }, [category.id, category.splitGender, selectedMale, selectedFemale]);
 
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+
+    // Minimum swipe distance (in px) to trigger navigation
+    const minSwipeDistance = 50;
+
+    const handleTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe && !isLast) {
+            onNext();
+        }
+        if (isRightSwipe && !isFirst) {
+            onPrev();
+        }
+    };
+
     const handleCardSelect = (nomineeId) => {
         if (category.splitGender) {
             onSelect(nomineeId, `-${activeTab}`);
+
+            // Auto-advance logic for split gender
+            const isCurrentlyMale = activeTab === "Male";
+            const otherGenderSelected = isCurrentlyMale ? selectedFemale : selectedMale;
+
+            if (isCurrentlyMale && !selectedFemale) {
+                setTimeout(() => setActiveTab("Female"), 350);
+            } else if (!isCurrentlyMale && !selectedMale) {
+                setTimeout(() => setActiveTab("Male"), 350);
+            } else if (otherGenderSelected && !isLast) {
+                // If both are now selected, auto-advance to next category
+                setTimeout(() => onNext(), 600);
+            }
         } else {
             onSelect(nomineeId);
+            // Auto-advance for standard category
+            if (!isLast) {
+                setTimeout(() => onNext(), 600);
+            }
         }
     };
 
@@ -96,7 +142,12 @@ export default function CategoryView({
     }, [category.nominees, searchTerm, category.splitGender, activeTab]);
 
     return (
-        <div style={{ maxWidth: 860, margin: "0 auto", padding: "16px 0 48px" }}>
+        <div
+            style={{ maxWidth: 860, margin: "0 auto", padding: "16px 0 48px" }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                     key={category.id}
