@@ -8,6 +8,7 @@ import { getOrCreateSession, getNominees, getUserVotes } from "../lib/appwrite";
 import VotingFlow from "../components/voting/VotingFlow";
 import Header from "../components/layout/Header";
 import GlobalSearch from "../components/ui/GlobalSearch";
+import Footer from "../components/layout/Footer";
 
 export default function VotingPage() {
     const navigate = useNavigate();
@@ -136,6 +137,7 @@ export default function VotingPage() {
                     />
                 )}
             </AnimatePresence>
+            <Footer/>
         </div>
     );
 }

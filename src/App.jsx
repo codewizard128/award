@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer/>
+    
     </BrowserRouter>
     
   );

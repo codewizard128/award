@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+import { Home, Moon, User, Sun,Phone,Gift } from "lucide-react";
+
 const SearchIcon = () => (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
@@ -16,20 +18,35 @@ export default function Header({ currentIndex, totalCategories, showProgress, on
             <div className="header-inner">
                 <div
                     className="header-logo"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer",backgroundColor:"transparent",border:"1px solid var(--border)",color:"var(--text-muted)",borderRadius:"10px",padding:"10px 10px"}}
                     onClick={() => navigate("/")}
                 >
-                    <img src="/logoaward.png" style={{ height: 24, width: "auto" }} alt="Logo" /> <span style={{ color: "white", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
-                    <span className="hidden-mobile">College Awards 2026</span>
+                    <img src="/logoaward.png" style={{ height: 24, width: "auto" ,mixBlendMode:"screen"}} alt="Logo" /> <span style={{ color: "var(--text-muted)", fontSize: 15, letterSpacing: "-0.02em" }}>Campus Crown</span>
+
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     {showProgress && (
                         <div className="progress-info">
                             <span>Category</span>
                             <span className="progress-count">
                                 {Math.min(votedCount, totalCategories)} / {totalCategories}
                             </span>
+                        </div>
+                    )}
+
+                    {!showProgress && (
+                        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                            <button className="icon-btn" onClick={() => navigate("/")} title="Home">
+                                <Home size={20} />
+                            </button>
+                            <button className="icon-btn" title="Contact Us" >
+                                <Phone size={20} />
+                            </button>
+                            <button className="icon-btn" title="Result" onClick={() => navigate("/results")}>
+                                <Gift size={20} />
+                            </button>
+
                         </div>
                     )}
 

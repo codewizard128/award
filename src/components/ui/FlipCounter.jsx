@@ -68,7 +68,6 @@ export default function FlipCounter() {
                     <Digit key={`${index}-${countStr.length - index}`} value={char} />
                 ))}
             </div>
-            <div className="flip-label">Real-time Voters</div>
         </div>
     );
 }

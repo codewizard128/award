@@ -28,14 +28,7 @@ export default function BottomNav({ onPrev, onNext, onSearchOpen, isFirst, isLas
                     <span style={{ fontWeight: 600, fontSize: 13 }}>Back</span>
                 </button>
 
-                {/* Search Bar (Functional Button) */}
-                <button
-                    className="bottom-nav-search hidden-mobile"
-                    onClick={onSearchOpen}
-                >
-                    <SearchIcon />
-                    <span>Search nominees...</span>
-                </button>
+                
 
                 {/* Next/Submit Button */}
                 <button

@@ -39,7 +39,7 @@ export default function LandingPage() {
         <div className="page">
             <Header showProgress={false} currentIndex={0} totalCategories={30} />
 
-            <section className="landing-hero" style={{ overflow: "hidden" }}>
+            <section className="landing-hero" style={{ overflow: "hidden", height: "100vh" }}>
                 <div className="landing-bg-grid" />
                 <div className="orb orb-1" />
                 <div className="orb orb-2" />
@@ -49,57 +49,56 @@ export default function LandingPage() {
                     variants={containerVariants}
                     initial="hidden"
                     animate="show"
-                    style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "column", alignItems: "center" }}
+                    className="hero-container"
+                    style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "column", alignItems: "center", width: "100%", height: "100%", justifyContent: "center", marginTop: "50px" }}
                 >
-                    <motion.div variants={itemVariants} className="landing-eyebrow">
-                        College Awards 2026
-                    </motion.div>
+                    <div className="hero-content-wrapper">
+                        <div className="hero-text-content">
+                            <motion.div variants={itemVariants} className="landing-eyebrow">
+                                College Awards 2026
+                            </motion.div>
 
-                    <motion.h1 variants={itemVariants} className="landing-title">
-                        Vote for the
-                        <br />
-                        <span className="gradient-text">Best of Us</span>
-                    </motion.h1>
+                            <motion.h1 variants={itemVariants} className="landing-title">
+                                Vote for the
+                                <br />
+                                <span className="gradient-text">Best of Us</span>
+                            </motion.h1>
 
-                    <motion.p variants={itemVariants} className="landing-subtitle">
-                        Cast your votes across 30+ award categories — from talent and personality to the awards everyone secretly wants.
-                    </motion.p>
+                            <motion.p variants={itemVariants} className="landing-subtitle">
+                                Cast your votes across 30+ award categories — from talent and personality to the awards everyone secretly wants.
+                            </motion.p>
 
-                    <motion.div variants={itemVariants}>
-                        <FlipCounter />
-                    </motion.div>
+                            <motion.div variants={itemVariants} className="landing-cta-group">
+                                <motion.button
+                                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 255, 255, 0.5)" }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="btn btn-primary btn-lg"
+                                    onClick={() => navigate("/vote")}
+                                >
+                                    Start Voting
+                                </motion.button>
+                                <motion.button
+                                    whileHover={{ scale: 1.05, background: "rgba(255,255,255,0.1)" }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="btn btn-ghost btn-lg"
+                                    onClick={() => navigate("/results")}
+                                >
+                                    View Results
+                                </motion.button>
+                            </motion.div>
+                        </div>
 
-                    <motion.div variants={itemVariants} className="landing-stats" style={{ marginTop: 24 }}>
-                        {STATS.map((s, i) => (
-                            <div key={s.label} style={{ display: "flex", alignItems: "center", gap: 32 }}>
-                                {i > 0 && <div className="stat-divider" />}
-                                <div className="stat">
-                                    <div className="stat-number" style={{ textShadow: "0 0 10px rgba(255,255,255,0.3)" }}>{s.number}</div>
-                                    <div className="stat-label" style={{ color: "var(--accent)" }}>{s.label}</div>
-                                </div>
+                        <motion.div variants={itemVariants} className="hero-counter-wrap">
+                            <div className="counter-display-box">
+                                <FlipCounter />
                             </div>
-                        ))}
-                    </motion.div>
+                            <div className="counter-label-box">
+                                Total Voters
+                            </div>
+                        </motion.div>
+                    </div>
 
-                    <motion.div variants={itemVariants} className="landing-cta-group" style={{ marginTop: 12 }}>
-                        <motion.button
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 255, 255, 0.5)" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="btn btn-primary btn-lg"
-                            style={{ background: "linear-gradient(90deg, #fff, #ddd)", border: "none" }}
-                            onClick={() => navigate("/vote")}
-                        >
-                            Start Voting →
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05, background: "rgba(255,255,255,0.1)" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="btn btn-ghost"
-                            onClick={() => navigate("/results")}
-                        >
-                            View Results
-                        </motion.button>
-                    </motion.div>
+                     
                 </motion.div>
             </section>
 
@@ -191,7 +190,7 @@ export default function LandingPage() {
             </section>
 
             {/* Footer */}
-            
+            <Footer/>
         </div>
     );
 }
