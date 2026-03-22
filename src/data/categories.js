@@ -157,6 +157,8 @@ export const CATEGORIES = [
 { id: "class-comedian", title: "Class Comedian", emoji: "😄", type: "funny", nominees: GLOBAL_NOMINEES },
 { id: "class-entertainer", title: "Class Entertainer", emoji: "🎭", type: "funny", nominees: GLOBAL_NOMINEES },
 { id: "drama-star", title: "Drama Star", emoji: "🎭", type: "funny", nominees: GLOBAL_NOMINEES },
+{id: "sigma-male", title: "Sigma Male", emoji: "🎭", type: "funny", nominees: GLOBAL_NOMINEES, gender: "Male" },
+{id: "sigma-female", title: "Sigma Female", emoji: "🎭", type: "funny", nominees: GLOBAL_NOMINEES, gender: "Female" },
 
 { id: "grand-entry", title: "Grand Entry Specialist", emoji: "⏰", type: "relatable", nominees: GLOBAL_NOMINEES },
 { id: "power-nap", title: "Power Nap Champion", emoji: "😴", type: "relatable", nominees: GLOBAL_NOMINEES },
