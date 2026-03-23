@@ -177,7 +177,7 @@ export const CATEGORIES = [
   { id: "dirty-mind", title: "That innocent face with a dirty mind", emoji: "😇😈", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "onthu", title: "That onthu", emoji: "🦎", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "voice-message", title: "Voice message lover", emoji: "🎤", type: "fun", nominees: GLOBAL_NOMINEES },
-  { id: "vikaara-jeevi", title: "Vikaara Jeevi", emoji: "🎤", type: "fun", nominees: GLOBAL_NOMINEES },
+  { id: "vikaara-jeevi", title: "Vikaara Jeevi", emoji: "💋", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "thantha-vibe", title: "That Thantha vibe", emoji: "😄", type: "fun", nominees: GLOBAL_NOMINEES, gender: "Male" },
   { id: "thalla-vibe", title: "That Thalla vibe", emoji: "😄", type: "fun", nominees: GLOBAL_NOMINEES, gender: "Female" },
 
