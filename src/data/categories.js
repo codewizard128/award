@@ -167,7 +167,6 @@ export const CATEGORIES = [
 
   { id: "classil-varaathavan-varathaval", title: "That classil varaathavan/varathaval", emoji: "🚫", type: "fun", nominees: GLOBAL_NOMINEES },
 
-  { id: "motivator", title: "That Motivator", emoji: "🔥", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "velivum-velliyaazhchayum", title: "That velivum velliyaazhchayum illathathu", emoji: "🤯", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "thottaavaadi", title: "Thottaavaadi", emoji: "🌱", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "kuzhimadiyan", title: "That kuzhimadiyan", emoji: "😵", type: "fun", nominees: GLOBAL_NOMINEES },
@@ -178,7 +177,7 @@ export const CATEGORIES = [
   { id: "dirty-mind", title: "That innocent face with a dirty mind", emoji: "😇😈", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "onthu", title: "That onthu", emoji: "🦎", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "voice-message", title: "Voice message lover", emoji: "🎤", type: "fun", nominees: GLOBAL_NOMINEES },
-
+  { id: "vikaara-jeevi", title: "Vikaara Jeevi", emoji: "🎤", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "thantha-vibe", title: "That Thantha vibe", emoji: "😄", type: "fun", nominees: GLOBAL_NOMINEES, gender: "Male" },
   { id: "thalla-vibe", title: "That Thalla vibe", emoji: "😄", type: "fun", nominees: GLOBAL_NOMINEES, gender: "Female" },
 
@@ -189,6 +188,8 @@ export const CATEGORIES = [
 
   { id: "vaayithalam", title: "That Vaayithalam adikkunna type", emoji: "🗣️", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "sticker-maker", title: "Sticker maker", emoji: "🧩", type: "fun", nominees: GLOBAL_NOMINEES },
+  { id: "crush-delusion", title: "Crush oru smile = 3 varsham swapnam", emoji: "💘", type: "fun", nominees: GLOBAL_NOMINEES },
+  { id: "walking-chaos", title: "Nadakkunna disaster", emoji: "💀", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "no-reply", title: "That reply tharaatha type", emoji: "📵", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "nere-va", title: "That nere va nere po type", emoji: "➡️", type: "fun", nominees: GLOBAL_NOMINEES },
   { id: "swayam-prakash", title: "That swayam prakash", emoji: "💡", type: "fun", nominees: GLOBAL_NOMINEES },
